@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ldw-dG-C3S">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Imgur Photo Links-->
+        <scene sceneID="C6E-q7-dJw">
+            <objects>
+                <tableViewController id="FQ2-aQ-OAk" customClass="LinksViewController" customModule="ShutterflyExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rst-Ze-OAq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LinkCell" textLabel="Ny4-Xm-XV1" detailTextLabel="Irg-VD-6EQ" style="IBUITableViewCellStyleSubtitle" id="GH1-w7-0AR">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GH1-w7-0AR" id="BuQ-cr-GoV">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ny4-Xm-XV1">
+                                            <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Irg-VD-6EQ">
+                                            <rect key="frame" x="20" y="25.5" width="33" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="FQ2-aQ-OAk" id="t66-sY-gCl"/>
+                            <outlet property="delegate" destination="FQ2-aQ-OAk" id="iEK-56-3re"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Imgur Photo Links" id="mt3-If-ZbD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0R6-fM-piS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-855" y="362"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vip-qm-OBu">
+            <objects>
+                <navigationController id="Ldw-dG-C3S" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="ZfC-54-x3j">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.94117647058823528" green="0.32156862745098036" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pN2-zc-jUq" kind="relationship" relationship="rootViewController" id="dxv-rS-57p"/>
+                        <segue destination="FQ2-aQ-OAk" kind="show" id="PU5-i5-py2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eWb-cc-PJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1770" y="-77"/>
+        </scene>
+        <!--Photos View Controller-->
+        <scene sceneID="wpa-pG-ITO">
+            <objects>
+                <collectionViewController id="pN2-zc-jUq" customClass="PhotosViewController" customModule="ShutterflyExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zDD-cW-0Oh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aUo-gR-wfn">
+                            <size key="itemSize" width="145" height="145"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="9IA-ZK-Md8" customClass="PhotoCell" customModule="ShutterflyExercise" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1000" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zpo-Fe-6dT">
+                                            <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                                        </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Twg-mO-7t1">
+                                            <rect key="frame" x="54" y="54" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-mark" translatesAutoresizingMaskIntoConstraints="NO" id="GVb-e0-bHe">
+                                            <rect key="frame" x="35" y="35" width="75" height="75"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="75" id="Qam-SX-X9c"/>
+                                                <constraint firstAttribute="height" constant="75" id="SGf-qH-yXf"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="Twg-mO-7t1" firstAttribute="centerY" secondItem="Zpo-Fe-6dT" secondAttribute="centerY" id="4Hb-0Q-45c"/>
+                                    <constraint firstAttribute="bottom" secondItem="Zpo-Fe-6dT" secondAttribute="bottom" id="Dbu-6C-iqH"/>
+                                    <constraint firstItem="Zpo-Fe-6dT" firstAttribute="leading" secondItem="9IA-ZK-Md8" secondAttribute="leading" id="Q1d-kP-XMB"/>
+                                    <constraint firstItem="GVb-e0-bHe" firstAttribute="centerX" secondItem="Zpo-Fe-6dT" secondAttribute="centerX" id="UEb-U2-WFN"/>
+                                    <constraint firstItem="Twg-mO-7t1" firstAttribute="centerX" secondItem="Zpo-Fe-6dT" secondAttribute="centerX" id="dKy-wJ-8Bi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zpo-Fe-6dT" secondAttribute="trailing" id="jjV-Wv-WvM"/>
+                                    <constraint firstItem="Zpo-Fe-6dT" firstAttribute="top" secondItem="9IA-ZK-Md8" secondAttribute="top" id="taH-Uh-2ME"/>
+                                    <constraint firstItem="GVb-e0-bHe" firstAttribute="centerY" secondItem="Zpo-Fe-6dT" secondAttribute="centerY" id="wRf-Yn-18o"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="checkMark" destination="GVb-e0-bHe" id="QD7-ik-mMp"/>
+                                    <outlet property="photo" destination="Zpo-Fe-6dT" id="7BC-ZU-uVE"/>
+                                    <outlet property="spinner" destination="Twg-mO-7t1" id="KU0-wf-6nU"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="pN2-zc-jUq" id="i1w-Sg-GgY"/>
+                            <outlet property="delegate" destination="pN2-zc-jUq" id="GEQ-BN-GCT"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="wq3-l2-nnM">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="obi-zL-mPj">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ynh-cu-v7o">
+                                <rect key="frame" x="358" y="7" width="36" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Links"/>
+                                <connections>
+                                    <segue destination="FQ2-aQ-OAk" kind="show" id="IMY-QV-aRX"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navBar" destination="wq3-l2-nnM" id="AGG-5J-ZxP"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u24-2q-kUh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-855.07246376811599" y="-413.16964285714283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="check-mark" width="300" height="300"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="PU5-i5-py2"/>
+    </inferredMetricsTieBreakers>
+</document>
